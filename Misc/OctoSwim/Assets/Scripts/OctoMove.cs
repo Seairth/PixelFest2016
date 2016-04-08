@@ -44,27 +44,30 @@ public class OctoMove : NetworkBehaviour {
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            body.rotation = lastRotation + turnRate;
-            lastRotation = body.rotation;
+            body.AddTorque(turnRate);
+            //body.rotation = lastRotation + turnRate;
+            //lastRotation = body.rotation;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            body.rotation = lastRotation - turnRate;
-            lastRotation = body.rotation;
+            body.AddTorque(-turnRate);
+            //body.rotation = lastRotation - turnRate;
+            //lastRotation = body.rotation;
         }
         else
         {
-            if (body.rotation != lastRotation)
-                body.rotation = lastRotation;
+            //if (body.rotation != lastRotation)
+            //    body.rotation = lastRotation;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Fire();
+            CmdFire();
         }
     }
 
-    void Fire()
+    [Command]
+    void CmdFire()
     {
         // Create the Bullet from the Bullet Prefab
         var bullet = (GameObject)Instantiate(
@@ -75,6 +78,8 @@ public class OctoMove : NetworkBehaviour {
         // Add velocity to the bullet
         var b = bullet.GetComponent<Rigidbody2D>();
         b.velocity = bullet.transform.up * 6;
+
+        NetworkServer.Spawn(bullet);
 
         // Destroy the bullet after 2 seconds
         Destroy(bullet, 2.0f);
