@@ -14,6 +14,8 @@ public class OctoMove : NetworkBehaviour {
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
+    private float lastRotation = 0;
+
 	// Use this for initialization
 	void Start () {
         body = GetComponent<Rigidbody2D>();
@@ -42,24 +44,23 @@ public class OctoMove : NetworkBehaviour {
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            //SpriteRot = ;
-            //CmdSetSpriteRot(new Vector3(0, 0, turnRate));
-            body.rotation += turnRate;
-            //CmdSetSpriteRot(body.rotation);
+            body.rotation = lastRotation + turnRate;
+            lastRotation = body.rotation;
         }
         else if (Input.GetKey(KeyCode.RightArrow))
         {
-            //SpriteRot = ;
-            //CmdSetSpriteRot(new Vector3(0, 0, -turnRate));
-            body.rotation -= turnRate;
-            //CmdSetSpriteRot(body.rotation);
+            body.rotation = lastRotation - turnRate;
+            lastRotation = body.rotation;
+        }
+        else
+        {
+            if (body.rotation != lastRotation)
+                body.rotation = lastRotation;
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Fire();
-            //body.
-            //SpriteRot = new Vector3(0, 0, 0);
         }
     }
 
