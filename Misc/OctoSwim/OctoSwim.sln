@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctoSwim.CSharp", "OctoSwim.CSharp.csproj", "{83AD1921-AA6E-DD8A-616C-0D2099A54B14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OctoSwim.CSharp.Editor.Plugins", "OctoSwim.CSharp.Editor.Plugins.csproj", "{C2D3D6A1-2520-DA81-1381-0FC3D5B3781C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{83AD1921-AA6E-DD8A-616C-0D2099A54B14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83AD1921-AA6E-DD8A-616C-0D2099A54B14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83AD1921-AA6E-DD8A-616C-0D2099A54B14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83AD1921-AA6E-DD8A-616C-0D2099A54B14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2D3D6A1-2520-DA81-1381-0FC3D5B3781C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2D3D6A1-2520-DA81-1381-0FC3D5B3781C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2D3D6A1-2520-DA81-1381-0FC3D5B3781C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2D3D6A1-2520-DA81-1381-0FC3D5B3781C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
