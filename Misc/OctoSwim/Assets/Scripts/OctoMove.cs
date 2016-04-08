@@ -14,8 +14,6 @@ public class OctoMove : NetworkBehaviour {
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
-    private float lastRotation = 0;
-
 	// Use this for initialization
 	void Start () {
         body = GetComponent<Rigidbody2D>();
@@ -96,5 +94,10 @@ public class OctoMove : NetworkBehaviour {
         //transform.Rotate(SpriteRot);
         //body.rotation = rot;
         //Debug.Log(string.Format("newpos: x: {0} y: {1} z: {2}", newpos.x, newpos.y, newpos.z));
+    }
+
+    void OnCollisionEnter2D(Collision2D coll)
+    {
+        Debug.Log("Player collide");
     }
 }
