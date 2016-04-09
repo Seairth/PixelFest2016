@@ -6,8 +6,40 @@ using UnityEngine.SceneManagement;
 
 public class NetworkManagerHelper : NetworkManager {
 
-	// Use this for initialization
-	void Start () {
-	    
-	}
+    public int MaxPlayers = 4;
+    private GameObject[] Players;
+    const int PlayerNumOffset = 1;
+
+    // Use this for initialization
+    void Start()
+    {
+        Players = new GameObject[MaxPlayers];
+    }
+
+    public int SetPlayerNum(GameObject newPlayer)
+    {
+        int retval = -1;
+
+        for (int i = 0; i < MaxPlayers; i++)
+        {
+            if (Players[i] == null)
+            {
+                Players[i] = newPlayer;
+                retval = i + PlayerNumOffset;
+                break;
+            }
+        }
+
+        return retval;
+    }
+
+    public bool IsPlayerConnected(int playerNum)
+    {
+        return Players[playerNum - PlayerNumOffset] != null;
+    }
+
+    public void RemovePlayerNum(int num)
+    {
+        Players[num - PlayerNumOffset] = null;
+    }
 }
