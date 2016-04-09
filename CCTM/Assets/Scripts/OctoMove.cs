@@ -18,8 +18,12 @@ public class OctoMove : NetworkBehaviour {
     public float camDampTime = 0.15f;
     private Vector3 camVelocity = Vector3.zero;
 
-    //public GameObject bulletPrefab;
-    //public Transform bulletSpawn;
+	//public GameObject bulletPrefab;
+	//public Transform bulletSpawn;
+
+	[SyncVar]
+	bool playing = false;
+
 
     // Use this for initialization
     void Start () {
@@ -57,11 +61,40 @@ public class OctoMove : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-        if (isLocalPlayer)
+        if (isLocalPlayer && playing)
         {
             Control();
         }
     }
+
+	void OnGUI()
+	{
+		if (! playing)
+		{
+			var x = Screen.width / 2;
+			var y = Screen.height / 2;
+
+			if (isServer)
+			{
+				x -= 160 / 2;
+				y -= 30 / 2;
+
+				if (GUI.Button(new Rect(x, y, 160, 30), "START"))
+					playing = true;
+			}
+			else
+			{
+				var style = new GUIStyle();
+				style.fontSize = 24;
+				style.fontStyle = FontStyle.Bold;
+				style.alignment = TextAnchor.MiddleCenter;
+				style.normal.textColor = Color.white;
+
+				GUI.Label(new Rect(x, y, 0, 0), "WAITING FOR START...", style);
+			}
+		}
+	}
+
 
     void Control()
     {

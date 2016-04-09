@@ -16,7 +16,17 @@ public class NetworkManagerHelper : NetworkManager {
         Players = new GameObject[MaxPlayers];
     }
 
-    public int SetPlayerNum(GameObject newPlayer)
+	public void StartHost()
+	{
+		base.StartHost();
+	}
+
+	public void StartClient()
+	{
+		base.StartClient();
+	}
+
+	public int SetPlayerNum(GameObject newPlayer)
     {
         int retval = -1;
 
