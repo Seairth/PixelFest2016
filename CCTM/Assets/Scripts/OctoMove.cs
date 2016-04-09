@@ -8,7 +8,9 @@ public class OctoMove : NetworkBehaviour {
     //[SyncVar(hook = "UpdateRot")]
     //public float SpriteRot;
 
-    public float force = 0;
+    public float forwardForce = 0;
+    public float backwardForce = 0;
+    
     public float turnRate = 0;
 
     public float camDampTime = 0.15f;
@@ -37,7 +39,7 @@ public class OctoMove : NetworkBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (isLocalPlayer)
         {
             Control();
@@ -47,7 +49,9 @@ public class OctoMove : NetworkBehaviour {
     void Control()
     {
         if (Input.GetKey(KeyCode.UpArrow))
-            body.AddForce(transform.up * force);
+            body.AddForce(transform.up * forwardForce);
+        else if (Input.GetKey(KeyCode.DownArrow))
+            body.AddForce(transform.up * -backwardForce);
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
