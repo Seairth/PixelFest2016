@@ -18,6 +18,10 @@ public class OctoMove : NetworkBehaviour {
     public float camDampTime = 0.15f;
     private Vector3 camVelocity = Vector3.zero;
 
+    [SyncVar(hook = "TreasuresHoldingChanged")]
+    public int numTreasuresHolding = 0;
+    public int MaxTreasuresCanHold = 3;
+
 	//public GameObject bulletPrefab;
 	//public Transform bulletSpawn;
 
@@ -127,6 +131,32 @@ public class OctoMove : NetworkBehaviour {
         }
     }
 
+    public void AddSingleTreasure()
+    {
+        numTreasuresHolding++;
+    }
+
+    public void DropSingleTreasure()
+    {
+        numTreasuresHolding--;
+    }
+
+    public void DropOffAllTreasure()
+    {
+        numTreasuresHolding = 0;
+    }
+
+    public void TreasuresHoldingChanged(int treasures)
+    {
+
+    }
+
+    [Command]
+    void CmdPickUpTreasure()
+    {
+        
+    }
+
     [Command]
     void CmdFire()
     {
@@ -172,5 +202,26 @@ public class OctoMove : NetworkBehaviour {
         {
             Debug.Log("Local player num is now " + newPlayerNum);
         }
+
+        var render = GetComponent<SpriteRenderer>();
+
+        if (render != null)
+        {
+            switch (newPlayerNum)
+            {
+                case 1:
+                    break;
+                case 2:
+                    render.color = Color.blue;
+                    break;
+                case 3:
+                    render.color = Color.red;
+                    break;
+                case 4:
+                    render.color = Color.green;
+                    break;
+            }
+        }
+
     }
 }
