@@ -1,0 +1,498 @@
+fileFormatVersion: 2
+guid: 700e247c24a87ba4a83fac1fe2f5ce33
+timeCreated: 1460243903
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SharkSwimSS_0
+    21300002: SharkSwimSS_1
+    21300004: SharkSwimSS_2
+    21300006: SharkSwimSS_3
+    21300008: SharkSwimSS_4
+    21300010: SharkSwimSS_5
+    21300012: SharkSwimSS_6
+    21300014: SharkSwimSS_7
+    21300016: SharkSwimSS_8
+    21300018: SharkSwimSS_9
+    21300020: SharkSwimSS_10
+    21300022: SharkSwimSS_11
+    21300024: SharkSwimSS_12
+    21300026: SharkSwimSS_13
+    21300028: SharkSwimSS_14
+    21300030: SharkSwimSS_15
+    21300032: SharkSwimSS_16
+    21300034: SharkSwimSS_17
+    21300036: SharkSwimSS_18
+    21300038: SharkSwimSS_19
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SharkSwimSS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 99.5, y: -19.242409}
+        - {x: 99.5, y: 30.757591}
+        - {x: -85.5, y: 30.757591}
+        - {x: -97.5, y: 22.757591}
+        - {x: -102.5, y: 12.757591}
+        - {x: -102.5, y: -5.2424088}
+        - {x: -80.5, y: -13.242409}
+        - {x: -33.5, y: -29.242409}
+        - {x: -13.5, y: -29.242409}
+        - {x: -13.5, y: -26.242409}
+        - {x: 89.5, y: -29.242409}
+      - - {x: 100.5, y: -29.242409}
+        - {x: 99.5, y: -26.242409}
+        - {x: 91.5, y: -26.242409}
+        - {x: 90.5, y: -29.242409}
+    - name: SharkSwimSS_1
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 100.8, y: 30.757591}
+        - {x: -89.2, y: 30.757591}
+        - {x: -102.2, y: 11.757591}
+        - {x: -102.2, y: -5.2424088}
+        - {x: -79.2, y: -14.242409}
+        - {x: -35.199997, y: -29.242409}
+        - {x: -11.199997, y: -29.242409}
+        - {x: -13.199997, y: -27.242409}
+        - {x: 86.8, y: -25.242409}
+        - {x: 100.8, y: 21.757591}
+      - - {x: 100.8, y: 2.7575912}
+        - {x: 102.8, y: 0.75759125}
+        - {x: 103.8, y: 0.75759125}
+        - {x: 103.8, y: 6.7575912}
+        - {x: 100.8, y: 5.7575912}
+    - name: SharkSwimSS_2
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.399994, y: 30.757591}
+        - {x: -102.399994, y: -1.2424088}
+        - {x: -56.399994, y: -29.242409}
+        - {x: 86.600006, y: -29.242409}
+        - {x: 90.600006, y: -28.242409}
+        - {x: 100.600006, y: 4.7575912}
+        - {x: 100.600006, y: 30.757591}
+      - - {x: 100.600006, y: 3.7575912}
+        - {x: 102.600006, y: 1.7575912}
+        - {x: 103.600006, y: 1.7575912}
+        - {x: 103.600006, y: 6.7575912}
+        - {x: 101.600006, y: 6.7575912}
+    - name: SharkSwimSS_3
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.599976, y: 30.757591}
+        - {x: -102.599976, y: -1.2424088}
+        - {x: -89.599976, y: -13.242409}
+        - {x: -39.599976, y: -29.242409}
+        - {x: 60.400024, y: -29.242409}
+        - {x: 99.400024, y: -24.242409}
+        - {x: 100.400024, y: -21.242409}
+        - {x: 100.400024, y: 30.757591}
+      - - {x: 100.400024, y: 2.7575912}
+        - {x: 102.400024, y: 0.75759125}
+        - {x: 103.400024, y: 0.75759125}
+        - {x: 103.400024, y: 6.7575912}
+        - {x: 100.400024, y: 5.7575912}
+    - name: SharkSwimSS_4
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.29999, y: 30.757591}
+        - {x: -102.29999, y: -3.2424088}
+        - {x: -92.29999, y: -29.242409}
+        - {x: 100.70001, y: -29.242409}
+        - {x: 100.70001, y: 30.757591}
+    - name: SharkSwimSS_5
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.5, y: 30.757591}
+        - {x: -102.5, y: -6.2424088}
+        - {x: -44.5, y: -29.242409}
+        - {x: 76.5, y: -29.242409}
+        - {x: 89.5, y: -27.242409}
+        - {x: 100.5, y: -3.2424088}
+        - {x: 100.5, y: 30.757591}
+    - name: SharkSwimSS_6
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.19995, y: 30.757591}
+        - {x: -102.19995, y: -29.242409}
+        - {x: 101.80005, y: -29.242409}
+        - {x: 101.80005, y: 30.757591}
+    - name: SharkSwimSS_7
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 99.6001, y: 30.757591}
+        - {x: -101.3999, y: 30.757591}
+        - {x: -102.3999, y: 28.757591}
+        - {x: -102.3999, y: -6.2424088}
+        - {x: -44.399902, y: -29.242409}
+        - {x: -8.399902, y: -29.242409}
+        - {x: 90.6001, y: -20.242409}
+        - {x: 101.6001, y: 24.757591}
+        - {x: 101.6001, y: 29.757591}
+    - name: SharkSwimSS_8
+      rect:
+        serializedVersion: 2
+        x: 3848
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -93.599976, y: 30.757591}
+        - {x: -102.599976, y: 21.757591}
+        - {x: -102.599976, y: -20.242409}
+        - {x: -98.599976, y: -29.242409}
+        - {x: 98.400024, y: -29.242409}
+        - {x: 101.400024, y: 8.757591}
+        - {x: 101.400024, y: 30.757591}
+      - - {x: 100.400024, y: 2.7575912}
+        - {x: 102.400024, y: 0.75759125}
+        - {x: 103.400024, y: 0.75759125}
+        - {x: 103.400024, y: 6.7575912}
+        - {x: 100.400024, y: 5.7575912}
+    - name: SharkSwimSS_9
+      rect:
+        serializedVersion: 2
+        x: 4329
+        y: 138
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -92.29993, y: 30.757591}
+        - {x: -102.29993, y: 13.757591}
+        - {x: -102.29993, y: -6.2424088}
+        - {x: -37.299927, y: -27.242409}
+        - {x: -31.299927, y: -29.242409}
+        - {x: 89.70007, y: -29.242409}
+        - {x: 101.70007, y: -2.2424088}
+        - {x: 101.70007, y: 30.757591}
+    - name: SharkSwimSS_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.5, y: 29.5}
+        - {x: -102.5, y: -3.5}
+        - {x: -101.5, y: -3.5}
+        - {x: -45.5, y: -29.5}
+        - {x: 57.5, y: -29.5}
+        - {x: 94.5, y: -25.5}
+        - {x: 101.5, y: -10.5}
+        - {x: 101.5, y: 29.5}
+    - name: SharkSwimSS_11
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.2, y: 29.5}
+        - {x: -102.2, y: -23.5}
+        - {x: -98.2, y: -29.5}
+        - {x: 101.8, y: -29.5}
+        - {x: 101.8, y: 29.5}
+    - name: SharkSwimSS_12
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -78.399994, y: 29.5}
+        - {x: -102.399994, y: 24.5}
+        - {x: -102.399994, y: -14.5}
+        - {x: -76.399994, y: -29.5}
+        - {x: 75.600006, y: -29.5}
+        - {x: 93.600006, y: -26.5}
+        - {x: 101.600006, y: -6.5}
+        - {x: 101.600006, y: 29.5}
+    - name: SharkSwimSS_13
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -64.599976, y: 29.5}
+        - {x: -98.599976, y: 27.5}
+        - {x: -102.599976, y: 23.5}
+        - {x: -102.599976, y: -2.5}
+        - {x: -81.599976, y: -12.5}
+        - {x: -57.599976, y: -29.5}
+        - {x: 74.400024, y: -29.5}
+        - {x: 92.400024, y: -26.5}
+        - {x: 101.400024, y: 19.5}
+        - {x: 101.400024, y: 28.5}
+        - {x: 98.400024, y: 29.5}
+      - - {x: 100.400024, y: 1.5}
+        - {x: 102.400024, y: -0.5}
+        - {x: 103.400024, y: -0.5}
+        - {x: 103.400024, y: 5.5}
+        - {x: 100.400024, y: 4.5}
+    - name: SharkSwimSS_14
+      rect:
+        serializedVersion: 2
+        x: 1924
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -88.29999, y: 29.5}
+        - {x: -87.29999, y: 21.5}
+        - {x: -84.29999, y: 20.5}
+        - {x: -102.29999, y: 6.5}
+        - {x: -102.29999, y: -5.5}
+        - {x: -43.299988, y: -29.5}
+        - {x: 35.700012, y: -29.5}
+        - {x: 89.70001, y: -23.5}
+        - {x: 100.70001, y: 11.5}
+        - {x: 100.70001, y: 29.5}
+    - name: SharkSwimSS_15
+      rect:
+        serializedVersion: 2
+        x: 2405
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.5, y: 29.5}
+        - {x: -102.5, y: -12.5}
+        - {x: -81.5, y: -29.5}
+        - {x: 94.5, y: -29.5}
+        - {x: 100.5, y: -13.5}
+        - {x: 100.5, y: 29.5}
+    - name: SharkSwimSS_16
+      rect:
+        serializedVersion: 2
+        x: 2886
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 101.80005, y: 29.5}
+        - {x: -102.19995, y: 29.5}
+        - {x: -102.19995, y: -4.5}
+        - {x: -83.19995, y: -18.5}
+        - {x: -35.19995, y: -29.5}
+        - {x: 40.80005, y: -29.5}
+        - {x: 87.80005, y: -23.5}
+        - {x: 100.80005, y: -15.5}
+        - {x: 101.80005, y: -8.5}
+      - - {x: 100.80005, y: 2.5}
+        - {x: 102.80005, y: 0.5}
+        - {x: 103.80005, y: 0.5}
+        - {x: 103.80005, y: 5.5}
+        - {x: 101.80005, y: 5.5}
+    - name: SharkSwimSS_17
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -97.3999, y: 29.5}
+        - {x: -102.3999, y: 28.5}
+        - {x: -102.3999, y: -29.5}
+        - {x: 100.6001, y: -29.5}
+        - {x: 100.6001, y: 25.5}
+        - {x: 82.6001, y: 29.5}
+      - - {x: 100.6001, y: 1.5}
+        - {x: 102.6001, y: -0.5}
+        - {x: 103.6001, y: -0.5}
+        - {x: 103.6001, y: 5.5}
+        - {x: 100.6001, y: 4.5}
+    - name: SharkSwimSS_18
+      rect:
+        serializedVersion: 2
+        x: 3848
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 100.400024, y: 16.5}
+        - {x: 100.400024, y: 22.5}
+        - {x: 99.400024, y: 24.5}
+        - {x: 89.400024, y: 24.5}
+        - {x: 64.400024, y: 29.5}
+        - {x: -102.599976, y: 29.5}
+        - {x: -102.599976, y: -2.5}
+        - {x: -87.599976, y: -11.5}
+        - {x: -32.599976, y: -29.5}
+        - {x: -13.599976, y: -29.5}
+        - {x: -13.599976, y: -28.5}
+        - {x: 45.400024, y: -29.5}
+        - {x: 90.400024, y: -29.5}
+      - - {x: 100.400024, y: 0.5}
+        - {x: 102.400024, y: -1.5}
+        - {x: 103.400024, y: -1.5}
+        - {x: 103.400024, y: 5.5}
+        - {x: 100.400024, y: 4.5}
+    - name: SharkSwimSS_19
+      rect:
+        serializedVersion: 2
+        x: 4329
+        y: 0
+        width: 481
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -102.29993, y: 29.5}
+        - {x: -102.29993, y: -29.5}
+        - {x: 100.70007, y: -29.5}
+        - {x: 100.70007, y: 24.5}
+        - {x: 80.70007, y: 29.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
