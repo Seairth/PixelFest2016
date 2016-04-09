@@ -11,19 +11,28 @@ public class OctoMove : NetworkBehaviour {
     public float force = 0;
     public float turnRate = 0;
 
+    public float camDampTime = 0.15f;
+    private Vector3 camVelocity = Vector3.zero;
+
     //public GameObject bulletPrefab;
     //public Transform bulletSpawn;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         body = GetComponent<Rigidbody2D>();
 
         if (isLocalPlayer)
         {
-            foreach (var src in GetComponents<AudioSource>())
+            var sc = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SmoothCamera2D>();
+
+            if (sc)
             {
-                src.Play();
+                sc.target = body.transform;
             }
+            //foreach (var src in GetComponents<AudioSource>())
+            //{
+            //    src.Play();
+            //}
         }
 	}
 	
@@ -31,7 +40,7 @@ public class OctoMove : NetworkBehaviour {
 	void Update () {
         if (isLocalPlayer)
         {
-            Control();   
+            Control();
         }
     }
 
