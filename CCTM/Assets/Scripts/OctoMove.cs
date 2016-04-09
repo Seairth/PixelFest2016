@@ -7,6 +7,8 @@ public class OctoMove : NetworkBehaviour {
     private Rigidbody2D body;
     //[SyncVar(hook = "UpdateRot")]
     //public float SpriteRot;
+    [SyncVar(hook = "PlayerNumChanged")]
+    public int PlayerNum = 0;
 
     public float forwardForce = 0;
     public float backwardForce = 0;
@@ -35,6 +37,21 @@ public class OctoMove : NetworkBehaviour {
             //{
             //    src.Play();
             //}
+        }
+
+        if (isServer)
+        {
+            var nmh = GameObject.FindObjectOfType<NetworkManagerHelper>();
+
+            if (nmh != null)
+            {
+                PlayerNum = nmh.SetPlayerNum(this.gameObject);
+                Debug.Log("Server: Player num is " + PlayerNum);
+            }
+            else
+            {
+                Debug.Log("Server: Error getting NHM");
+            }
         }
 	}
 	
@@ -114,5 +131,13 @@ public class OctoMove : NetworkBehaviour {
     void OnCollisionEnter2D(Collision2D coll)
     {
         //Debug.Log("Player collide");
+    }
+
+    void PlayerNumChanged(int newPlayerNum)
+    {
+        if (isLocalPlayer)
+        {
+            Debug.Log("Local player num is now " + newPlayerNum);
+        }
     }
 }
