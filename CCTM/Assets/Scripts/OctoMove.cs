@@ -241,6 +241,7 @@ public class OctoMove : NetworkBehaviour {
     {
         Debug.Log("Player " + PlayerNum + " is holding " + treasures + " treasures.");
         GetComponent<Rigidbody2D>().gravityScale = treasures * GravityPerTreasureMultiplier;
+        UpdateText(treasuresCollected, treasures);
     }
 
     public void TreasuresCollectedChanged(int treasures)
