@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.Networking;
 using UnityEngine.Networking.Match;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class NetworkManagerHelper : NetworkManager {
 
@@ -14,17 +15,32 @@ public class NetworkManagerHelper : NetworkManager {
     void Start()
     {
         Players = new GameObject[MaxPlayers];
+
+		var input = FindObjectOfType<InputField>();
+		input.text = networkAddress;
+		input.onValueChange.AddListener(SetHostAddress);
     }
 
     public void StartHost()
     {
+		if (string.IsNullOrEmpty(networkAddress))
+			return;
+
         base.StartHost();
     }
 
     public void StartClient()
     {
-        base.StartClient();
+		if (string.IsNullOrEmpty(networkAddress))
+			return;
+
+		base.StartClient();
     }
+
+	public void SetHostAddress(string address)
+	{
+		networkAddress = address;
+	}
 
     public int SetPlayerNum(GameObject newPlayer)
     {
