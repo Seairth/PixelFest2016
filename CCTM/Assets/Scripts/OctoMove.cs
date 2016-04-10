@@ -41,6 +41,9 @@ public class OctoMove : NetworkBehaviour {
     private GameObject spawnLoc = null;
 
     DateTimeOffset lastPlayingCheck = DateTimeOffset.MinValue;
+    DateTimeOffset lastEnemyCollision = DateTimeOffset.MinValue;
+
+    public float hitCooldownSeconds = 0.75f;
 
     // Use this for initialization
     void Start () {
@@ -365,10 +368,15 @@ public class OctoMove : NetworkBehaviour {
         }
         else if (other.gameObject.CompareTag("Enemy"))
         {
-            if (numTreasuresHolding >= 0)
+            if (DateTimeOffset.UtcNow.Subtract(lastEnemyCollision).TotalMilliseconds > hitCooldownSeconds * 1000)
             {
-                Debug.Log("Dropping treasure!");
-                DropSingleTreasure();
+                if (numTreasuresHolding >= 0)
+                {
+                    Debug.Log("Dropping treasure!");
+                    DropSingleTreasure();
+                }
+
+                lastEnemyCollision = DateTimeOffset.UtcNow;
             }
         }
         else if (other.gameObject.CompareTag("Dropoff"))
