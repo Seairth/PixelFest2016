@@ -5,22 +5,17 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 public class OctoSound : MonoBehaviour {
-    public AudioMixerSnapshot ambient;
-    public AudioMixerSnapshot combat;
-    
+	public AudioClip collisionSound;
+
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Combat"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            combat.TransitionTo(0);
+			GetComponent<AudioSource>().PlayOneShot(collisionSound);
         }
     }
     
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Combat"))
-        {
-            ambient.TransitionTo(0);
-        }        
     }
 }
