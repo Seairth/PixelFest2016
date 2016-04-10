@@ -1,0 +1,167 @@
+fileFormatVersion: 2
+guid: 3bda9622b78f86a438ae5fe8d0dc1f93
+timeCreated: 1460301841
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: kelp and stuff_0
+    21300002: kelp and stuff_1
+    21300004: kelp and stuff_2
+    21300006: kelp and stuff_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: kelp and stuff_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 356
+        width: 164
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -2, y: 111.5}
+        - {x: -17, y: 111.5}
+        - {x: -26, y: 98.5}
+        - {x: -30, y: 89.5}
+        - {x: -35, y: 67.5}
+        - {x: -36, y: 60.5}
+        - {x: -36, y: 31.5}
+        - {x: -34, y: 16.5}
+        - {x: -32, y: 4.5}
+        - {x: -59, y: 36.5}
+        - {x: -66, y: 41.5}
+        - {x: -82, y: 15.5}
+        - {x: -82, y: -111.5}
+        - {x: 82, y: -111.5}
+        - {x: 82, y: -49.5}
+        - {x: 74, y: 77.5}
+        - {x: 60, y: 105.5}
+        - {x: 52, y: 100.5}
+    - name: kelp and stuff_1
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 359
+        width: 212
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 52, y: 40}
+        - {x: 29, y: 112}
+        - {x: -58, y: 112}
+        - {x: -106, y: 24}
+        - {x: -106, y: -112}
+        - {x: 106, y: -112}
+        - {x: 106, y: 20}
+        - {x: 97, y: 47}
+    - name: kelp and stuff_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4
+        width: 234
+        height: 236
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38, y: 103}
+        - {x: 27, y: 90}
+        - {x: 33, y: 58}
+        - {x: 23, y: 91}
+        - {x: 3, y: 118}
+        - {x: -31, y: 118}
+        - {x: -46, y: 90}
+        - {x: -48, y: 71}
+        - {x: -48, y: 48}
+        - {x: -47, y: 47}
+        - {x: -47, y: 35}
+        - {x: -46, y: 28}
+        - {x: -47, y: 32}
+        - {x: -47, y: 43}
+        - {x: -48, y: 44}
+        - {x: -48, y: 51}
+        - {x: -49, y: 62}
+        - {x: -58, y: 91}
+        - {x: -117, y: 18}
+        - {x: -117, y: -118}
+        - {x: 117, y: -118}
+        - {x: 117, y: -90}
+        - {x: 104, y: -60}
+    - name: kelp and stuff_3
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 0
+        width: 272
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -53, y: 128.5}
+        - {x: -73, y: 93.5}
+        - {x: -58, y: 35.5}
+        - {x: -70, y: 71.5}
+        - {x: -89, y: 90.5}
+        - {x: -91, y: 83.5}
+        - {x: -136, y: -73.5}
+        - {x: -136, y: -128.5}
+        - {x: 136, y: -128.5}
+        - {x: 136, y: -65.5}
+        - {x: 105, y: 48.5}
+        - {x: 16, y: 110.5}
+        - {x: -32, y: 128.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
