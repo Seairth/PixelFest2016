@@ -246,10 +246,14 @@ public class OctoMove : NetworkBehaviour {
     public void TreasuresCollectedChanged(int treasures)
     {
         Debug.Log("Player " + PlayerNum + " has now collected " + treasures + " treasure.");
-        
+        UpdateText(treasures, 0);
+    }
+
+    void UpdateText(int treasures, int holding)
+    {
         if (myScoreText != null)
         {
-            myScoreText.text = treasures.ToString();
+            myScoreText.text = treasures.ToString() + " (" + holding.ToString() + ")";
         }
     }
 
@@ -257,6 +261,7 @@ public class OctoMove : NetworkBehaviour {
     void CmdSetHoldingTreasure(int num)
     {
         numTreasuresHolding = num;
+        UpdateText(treasuresCollected, num);
     }
 
     [Command]
@@ -423,6 +428,7 @@ public class OctoMove : NetworkBehaviour {
                     Debug.LogError("FOUND MY NAME TEXT: " + playerText.name);
                     myScoreText = playerText;
                     tags.SetActive(true);
+                    UpdateText(treasuresCollected, numTreasuresHolding);
                     break;
                 }
                 else
