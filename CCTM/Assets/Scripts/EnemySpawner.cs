@@ -70,7 +70,7 @@ public class EnemySpawner : NetworkBehaviour {
     [ClientRpc]
     void RpcSpawnEnemy(int index)
     {
-        Debug.Log("Spawning enemy");
+        //Debug.Log("Spawning enemy");
         GameObject o = (GameObject)Instantiate(ObjectsToSpawn[index], transform.position, Quaternion.identity);
 
         if (o != null)

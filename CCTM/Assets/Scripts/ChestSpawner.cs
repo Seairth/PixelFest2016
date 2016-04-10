@@ -14,6 +14,9 @@ public class ChestSpawner : NetworkBehaviour {
     public float despawnMin = 15.0f;
     public float despawnMax = 20.0f;
 
+    public int minBars = 1;
+    public int maxBars = 5;
+
     // Use this for initialization
     void Start () {
         //this.gameObject.AddComponent<ChestController>();
@@ -49,7 +52,7 @@ public class ChestSpawner : NetworkBehaviour {
     void SpawnAfterRandomDelay()
     {
         float delay = Random.Range(spawnMin, spawnMax);
-        Debug.Log("Spawning chest after " + delay + " seconds.");
+        //Debug.Log("Spawning chest after " + delay + " seconds.");
         Invoke("SpawnNow", delay);
     }
 
@@ -59,7 +62,7 @@ public class ChestSpawner : NetworkBehaviour {
         {
             if (objectToSpawn != null)
             {
-                RpcSpawnChest();
+                RpcSpawnChest(Random.Range(minBars, maxBars));
             }
             else
             {
@@ -69,20 +72,33 @@ public class ChestSpawner : NetworkBehaviour {
     }
 
     [ClientRpc]
-    void RpcSpawnChest()
+    void RpcSpawnChest(int numBars)
     {
         if (objectToSpawn != null)
         {
-            Debug.Log("Spawning chest");
+            //Debug.Log("Spawning chest");
             spawnedObject = (GameObject)Instantiate(objectToSpawn, transform.position, Quaternion.identity);
 
-            if (spawnedObject == null)
+            if (spawnedObject != null)
+            {
+                var cont = spawnedObject.GetComponent<ChestController>();
+                if (cont != null)
+                {
+                    //((ChestController)spawnedObject).SetBars(numBars);
+                    cont.SetBars(numBars);
+                }
+                else
+                {
+                    Debug.LogError("ERROR: ChestController is null");
+                }
+            }
+            else
             {
                 Debug.Log("ERROR: Spawned chest was null");
             }
 
             float des = Random.Range(despawnMin, despawnMax);
-            Debug.Log("Despawning chest after " + des + " seconds.");
+            //Debug.Log("Despawning chest after " + des + " seconds.");
             Invoke("RpcDespawnChest", des);
         }
         else

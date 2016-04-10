@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 using System;
 
 public class OctoMove : NetworkBehaviour {
@@ -22,6 +23,13 @@ public class OctoMove : NetworkBehaviour {
     [SyncVar(hook = "TreasuresHoldingChanged")]
     public int numTreasuresHolding = 0;
     public int MaxTreasuresCanHold = 3;
+
+    [SyncVar(hook = "TreasuresCollectedChanged")]
+    public int treasuresCollected = 0;
+
+    public float GravityPerTreasureMultiplier = 1;
+
+    public Text myScoreText = null;
 
 	//public GameObject bulletPrefab;
 	//public Transform bulletSpawn;
@@ -196,32 +204,59 @@ public class OctoMove : NetworkBehaviour {
 			anim.SetBool("PickUp", true);
 		else if (Input.GetButton("PutDown"))
 			anim.SetBool("PutDown", true);
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Debug.Log("M KEY ADD TREASURE");
+            AddSingleTreasure();
+        }
 	}
 
 	public void AddSingleTreasure()
     {
-        numTreasuresHolding++;
+        if (numTreasuresHolding < MaxTreasuresCanHold)
+            numTreasuresHolding++;
+
+        CmdSetHoldingTreasure(numTreasuresHolding);
     }
 
     public void DropSingleTreasure()
     {
-        numTreasuresHolding--;
+        if (numTreasuresHolding > 0)
+            numTreasuresHolding--;
+
+        CmdSetHoldingTreasure(numTreasuresHolding);
     }
 
     public void DropOffAllTreasure()
     {
-        numTreasuresHolding = 0;
+        if (numTreasuresHolding > 0)
+        {
+            treasuresCollected += numTreasuresHolding;
+            numTreasuresHolding = 0;
+        }
     }
 
     public void TreasuresHoldingChanged(int treasures)
     {
+        Debug.Log("Player " + PlayerNum + " is holding " + treasures + " treasures.");
+        GetComponent<Rigidbody2D>().gravityScale = treasures * GravityPerTreasureMultiplier;
+    }
 
+    public void TreasuresCollectedChanged(int treasures)
+    {
+        Debug.Log("Player " + PlayerNum + " has now collected " + treasures + " treasure.");
+        
+        if (myScoreText != null)
+        {
+            myScoreText.text = treasures.ToString();
+        }
     }
 
     [Command]
-    void CmdPickUpTreasure()
+    void CmdSetHoldingTreasure(int num)
     {
-        
+        numTreasuresHolding = num;
     }
 
     [Command]
@@ -287,6 +322,53 @@ public class OctoMove : NetworkBehaviour {
     void OnCollisionEnter2D(Collision2D coll)
     {
         //Debug.Log("Player collide");
+        
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("OnTrigger Player");
+        if (other.gameObject.CompareTag("Treasure"))
+        {
+            if (numTreasuresHolding < MaxTreasuresCanHold)
+            {
+                Debug.Log("Attempting to add treasure");
+                AddSingleTreasure();
+
+                var cont = other.gameObject.GetComponent<ChestController>();
+
+                if (cont != null)
+                {
+                    Debug.Log("Attempting decrement chest");
+                    cont.Decrease();
+                }
+                else
+                {
+                    Debug.Log("ERROR: Chest controller null");
+                }
+
+                //transform.Rotate(Vector3.forward * -90);
+                //anim.SetBool("PickUp", true);
+            }
+
+            //Debug.Log("Attempting to destroy object");
+            //Destroy(other.gameObject);
+        }
+        else if (other.gameObject.CompareTag("Enemy"))
+        {
+            if (numTreasuresHolding >= 0)
+            {
+                Debug.Log("Dropping treasure!");
+                DropSingleTreasure();
+            }
+        }
+        else if (other.gameObject.CompareTag("Dropoff"))
+        {
+            if (numTreasuresHolding >= 0)
+            {
+                DropOffAllTreasure();
+            }
+        }
     }
 
     void PlayerNumChanged(int newPlayerNum)
@@ -321,6 +403,39 @@ public class OctoMove : NetworkBehaviour {
                     render.color = Color.green;
                     break;
             }
+        }
+
+        Debug.Log("Set color for player " + plNum);
+
+        myScoreText = null;
+
+        foreach (var tags in GameObject.FindGameObjectsWithTag("PlayerScoreText"))
+        {
+            Text playerText = tags.GetComponent<Text>();
+            if (playerText != null)
+            {
+                Debug.Log("Checking text " + playerText.name);
+                if (playerText.name == "Player" + plNum + "Score")
+                {
+                    Debug.LogError("FOUND MY NAME TEXT: " + playerText.name);
+                    myScoreText = playerText;
+                    tags.SetActive(true);
+                    break;
+                }
+                else
+                {
+                    //Debug.LogError("Name: " + t.name);
+                }
+            }
+            else
+            {
+                Debug.LogError("playerText is null");
+            }
+        }
+
+        if (myScoreText == null)
+        {
+            Debug.LogError("Error: did not find player score text for player " + plNum);
         }
     }
 

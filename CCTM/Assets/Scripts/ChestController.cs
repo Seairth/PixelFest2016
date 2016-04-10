@@ -15,9 +15,15 @@ public class ChestController : MonoBehaviour {
 		SetSprite();
 	}
 
+    public void SetBars(int bars)
+    {
+        this.bars = bars;
+        SetSprite();
+    }
+
 	public bool Decrease()
 	{
-		Debug.Log("Bars: " + bars);
+		//Debug.Log("Bars: " + bars);
 
 		if (bars == 0)
 			return false;
