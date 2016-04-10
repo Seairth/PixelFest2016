@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyMover : MonoBehaviour {
     public enum MovementDirectionEnum { Left, Right, Stop }
 
-    private MovementDirectionEnum MovementDirection = MovementDirectionEnum.Stop;
+    public MovementDirectionEnum MovementDirection = MovementDirectionEnum.Stop;
 
     public float Speed = 1.0f;
     public float HorizontalVariation = 0.0f;

@@ -1,0 +1,536 @@
+fileFormatVersion: 2
+guid: ebf5a961e64b37b44a17ffdf6a93ed84
+timeCreated: 1460299651
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ElectricFeel_0
+    21300002: ElectricFeel_1
+    21300004: ElectricFeel_2
+    21300006: ElectricFeel_3
+    21300008: ElectricFeel_4
+    21300010: ElectricFeel_5
+    21300012: ElectricFeel_6
+    21300014: ElectricFeel_7
+    21300016: ElectricFeel_8
+    21300018: ElectricFeel_9
+    21300020: ElectricFeel_10
+    21300022: ElectricFeel_11
+    21300024: ElectricFeel_12
+    21300026: ElectricFeel_13
+    21300028: ElectricFeel_14
+    21300030: ElectricFeel_15
+    21300032: ElectricFeel_16
+    21300034: ElectricFeel_17
+    21300036: ElectricFeel_18
+    21300038: ElectricFeel_19
+    21300040: ElectricFeel_20
+    21300042: ElectricFeel_21
+    21300044: ElectricFeel_22
+    21300046: ElectricFeel_23
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ElectricFeel_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.5, y: 17.417263}
+        - {x: -85.5, y: -3.582737}
+        - {x: -80.5, y: -7.582737}
+        - {x: -54.5, y: -10.582737}
+        - {x: -6.5, y: -13.582737}
+        - {x: 68.5, y: -13.582737}
+        - {x: 85.5, y: -10.582737}
+        - {x: 85.5, y: 2.417263}
+        - {x: 63.5, y: 17.417263}
+    - name: ElectricFeel_1
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4.3333282, y: 17.417263}
+        - {x: -52.33333, y: 17.417263}
+        - {x: -85.33333, y: 5.417263}
+        - {x: -85.33333, y: -7.582737}
+        - {x: -32.33333, y: -13.582737}
+        - {x: 83.66667, y: -13.582737}
+        - {x: 86.66667, y: -7.582737}
+        - {x: 86.66667, y: 2.417263}
+        - {x: 77.66667, y: 10.417263}
+    - name: ElectricFeel_2
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 12.8333435, y: 17.417263}
+        - {x: -55.166656, y: 17.417263}
+        - {x: -85.16666, y: 9.417263}
+        - {x: -85.16666, y: -6.582737}
+        - {x: -64.16666, y: -13.582737}
+        - {x: 84.83334, y: -13.582737}
+        - {x: 85.83334, y: -9.582737}
+        - {x: 85.83334, y: 1.417263}
+        - {x: 78.83334, y: 9.417263}
+    - name: ElectricFeel_3
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 19.417263}
+        - {x: -85.5, y: 8.417263}
+        - {x: -85.5, y: -3.582737}
+        - {x: -52.5, y: -14.582737}
+        - {x: 34.5, y: -14.582737}
+        - {x: 82.5, y: -13.582737}
+        - {x: 85.5, y: -11.582737}
+        - {x: 85.5, y: 6.417263}
+        - {x: 64.5, y: 19.417263}
+    - name: ElectricFeel_4
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -55.333313, y: 19.417263}
+        - {x: -85.33331, y: 12.417263}
+        - {x: -85.33331, y: -9.582737}
+        - {x: -82.33331, y: -15.582737}
+        - {x: -61.333313, y: -16.582737}
+        - {x: 86.66669, y: -16.582737}
+        - {x: 86.66669, y: 4.417263}
+        - {x: 68.66669, y: 19.417263}
+    - name: ElectricFeel_5
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 53.833313, y: 19.417263}
+        - {x: -7.166687, y: 19.417263}
+        - {x: -85.16669, y: 11.417263}
+        - {x: -85.16669, y: -16.582737}
+        - {x: -66.16669, y: -17.582737}
+        - {x: 85.83331, y: -17.582737}
+        - {x: 85.83331, y: 0.41726303}
+        - {x: 79.83331, y: 11.417263}
+    - name: ElectricFeel_6
+      rect:
+        serializedVersion: 2
+        x: 2514
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 51.5, y: 19.417263}
+        - {x: -12.5, y: 19.417263}
+        - {x: -78.5, y: 11.417263}
+        - {x: -85.5, y: 8.417263}
+        - {x: -85.5, y: 0.41726303}
+        - {x: -81.5, y: -10.582737}
+        - {x: -39.5, y: -19.582737}
+        - {x: 85.5, y: -19.582737}
+        - {x: 85.5, y: 0.41726303}
+        - {x: 78.5, y: 8.417263}
+    - name: ElectricFeel_7
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -84.333374, y: 9.417263}
+        - {x: -84.333374, y: -3.582737}
+        - {x: -57.333374, y: -19.582737}
+        - {x: 51.666626, y: -19.582737}
+        - {x: 86.666626, y: -13.582737}
+        - {x: 86.666626, y: 2.417263}
+        - {x: 83.666626, y: 9.417263}
+    - name: ElectricFeel_8
+      rect:
+        serializedVersion: 2
+        x: 3352
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.166626, y: 9.417263}
+        - {x: -85.166626, y: -2.582737}
+        - {x: -49.166626, y: -19.582737}
+        - {x: 32.833374, y: -19.582737}
+        - {x: 83.833374, y: -13.582737}
+        - {x: 85.833374, y: -9.582737}
+        - {x: 85.833374, y: 4.417263}
+        - {x: 82.833374, y: 9.417263}
+    - name: ElectricFeel_9
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.5, y: 9.417263}
+        - {x: -85.5, y: -19.582737}
+        - {x: 85.5, y: -19.582737}
+        - {x: 85.5, y: 7.417263}
+        - {x: 81.5, y: 9.417263}
+    - name: ElectricFeel_10
+      rect:
+        serializedVersion: 2
+        x: 4190
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -43.333374, y: 9.417263}
+        - {x: -84.333374, y: 8.417263}
+        - {x: -85.333374, y: 7.417263}
+        - {x: -85.333374, y: -0.58273697}
+        - {x: -71.333374, y: -9.582737}
+        - {x: -49.333374, y: -19.582737}
+        - {x: 18.666626, y: -19.582737}
+        - {x: 86.666626, y: -9.582737}
+        - {x: 86.666626, y: 2.417263}
+        - {x: 80.666626, y: 9.417263}
+    - name: ElectricFeel_11
+      rect:
+        serializedVersion: 2
+        x: 4609
+        y: 98
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -50.166626, y: 10.417263}
+        - {x: -85.166626, y: 7.417263}
+        - {x: -85.166626, y: -0.58273697}
+        - {x: -81.166626, y: -3.582737}
+        - {x: -57.166626, y: -19.582737}
+        - {x: 55.833374, y: -19.582737}
+        - {x: 85.833374, y: -11.582737}
+        - {x: 85.833374, y: 7.417263}
+        - {x: 82.833374, y: 10.417263}
+    - name: ElectricFeel_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -15.5, y: 9}
+        - {x: -80.5, y: 7}
+        - {x: -85.5, y: 5}
+        - {x: -85.5, y: -3}
+        - {x: -77.5, y: -9}
+        - {x: -54.5, y: -20}
+        - {x: 49.5, y: -20}
+        - {x: 85.5, y: -16}
+        - {x: 85.5, y: 1}
+        - {x: 79.5, y: 9}
+    - name: ElectricFeel_13
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2.6666718, y: 10}
+        - {x: -84.33333, y: 6}
+        - {x: -85.33333, y: 5}
+        - {x: -85.33333, y: -5}
+        - {x: -84.33333, y: -7}
+        - {x: -52.33333, y: -14}
+        - {x: 57.66667, y: -14}
+        - {x: 83.66667, y: -10}
+        - {x: 86.66667, y: -6}
+        - {x: 86.66667, y: 3}
+        - {x: 80.66667, y: 10}
+    - name: ElectricFeel_14
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26.833344, y: 11}
+        - {x: -84.16666, y: 4}
+        - {x: -85.16666, y: 4}
+        - {x: -85.16666, y: -14}
+        - {x: 85.83334, y: -14}
+        - {x: 85.83334, y: 7}
+        - {x: 79.83334, y: 11}
+    - name: ElectricFeel_15
+      rect:
+        serializedVersion: 2
+        x: 1257
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -68.5, y: -14}
+        - {x: 80.5, y: -14}
+        - {x: 85.5, y: -11}
+        - {x: 85.5, y: 9}
+        - {x: 82.5, y: 12}
+        - {x: -10.5, y: 12}
+        - {x: -85.5, y: 7}
+        - {x: -85.5, y: -11}
+    - name: ElectricFeel_16
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.33331, y: 12}
+        - {x: -85.33331, y: -13}
+        - {x: -77.33331, y: -14}
+        - {x: 79.66669, y: -14}
+        - {x: 86.66669, y: -8}
+        - {x: 86.66669, y: 12}
+    - name: ElectricFeel_17
+      rect:
+        serializedVersion: 2
+        x: 2095
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 38.833313, y: 13}
+        - {x: -85.16669, y: 7}
+        - {x: -85.16669, y: -14}
+        - {x: 85.83331, y: -14}
+        - {x: 85.83331, y: 9}
+        - {x: 77.83331, y: 13}
+    - name: ElectricFeel_18
+      rect:
+        serializedVersion: 2
+        x: 2514
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -58.5, y: 14}
+        - {x: -85.5, y: 5}
+        - {x: -85.5, y: -6}
+        - {x: -71.5, y: -14}
+        - {x: 85.5, y: -14}
+        - {x: 85.5, y: 14}
+    - name: ElectricFeel_19
+      rect:
+        serializedVersion: 2
+        x: 2933
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -71.333374, y: 20}
+        - {x: -85.333374, y: 9}
+        - {x: -85.333374, y: -13}
+        - {x: 85.666626, y: -13}
+        - {x: 86.666626, y: -11}
+        - {x: 86.666626, y: 14}
+        - {x: 65.666626, y: 20}
+    - name: ElectricFeel_20
+      rect:
+        serializedVersion: 2
+        x: 3352
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -63.166626, y: 20}
+        - {x: -85.166626, y: 7}
+        - {x: -85.166626, y: -13}
+        - {x: 85.833374, y: -13}
+        - {x: 85.833374, y: 18}
+        - {x: 69.833374, y: 20}
+    - name: ElectricFeel_21
+      rect:
+        serializedVersion: 2
+        x: 3771
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.5, y: 20}
+        - {x: -85.5, y: -13}
+        - {x: 80.5, y: -13}
+        - {x: 85.5, y: -7}
+        - {x: 85.5, y: 20}
+    - name: ElectricFeel_22
+      rect:
+        serializedVersion: 2
+        x: 4190
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -85.333374, y: 20}
+        - {x: -85.333374, y: -9}
+        - {x: -68.333374, y: -13}
+        - {x: 42.666626, y: -13}
+        - {x: 82.666626, y: -11}
+        - {x: 86.666626, y: -6}
+        - {x: 86.666626, y: 20}
+    - name: ElectricFeel_23
+      rect:
+        serializedVersion: 2
+        x: 4609
+        y: 0
+        width: 419
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 76.833374, y: 11}
+        - {x: 1.833374, y: 20}
+        - {x: -43.166626, y: 20}
+        - {x: -85.166626, y: 5}
+        - {x: -85.166626, y: -5}
+        - {x: -80.166626, y: -9}
+        - {x: -50.166626, y: -12}
+        - {x: 11.833374, y: -13}
+        - {x: 84.833374, y: -13}
+        - {x: 85.833374, y: -9}
+        - {x: 85.833374, y: 5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
