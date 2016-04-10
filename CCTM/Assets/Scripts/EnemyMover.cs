@@ -7,10 +7,14 @@ public class EnemyMover : MonoBehaviour {
     private MovementDirectionEnum MovementDirection = MovementDirectionEnum.Stop;
 
     public float Speed = 1.0f;
+    public float HorizontalVariation = 0.0f;
+
+    private float OriginalY = 0.0f;
+    private bool goingUp = true;
 
     // Use this for initialization
     void Start () {
-	
+        OriginalY = transform.position.y;
 	}
 	
 	// Update is called once per frame
@@ -18,6 +22,7 @@ public class EnemyMover : MonoBehaviour {
         if (MovementDirection != MovementDirectionEnum.Stop)
         {
             float newX = transform.position.x;
+            float newY = transform.position.y;
 
             if (MovementDirection == MovementDirectionEnum.Left)
             {
@@ -28,12 +33,49 @@ public class EnemyMover : MonoBehaviour {
                 newX += (Speed * Time.deltaTime);
             }
 
-            transform.position = new Vector3(newX, transform.position.y, transform.position.z);
+            float horizVar = (HorizontalVariation / Speed * 10) * Time.deltaTime;
+
+            if (goingUp)
+            {
+                newY += horizVar;
+            }
+            else
+            {
+                newY -= horizVar;
+            }
+
+            if (newY >= OriginalY + HorizontalVariation)
+            {
+                goingUp = false;
+            }
+            else if (newY <= OriginalY - HorizontalVariation)
+            {
+                goingUp = true;
+            }
+
+            transform.position = new Vector3(newX, newY, transform.position.z);
         }
 	}
 
     public void SetMovementDirection(MovementDirectionEnum mv)
     {
         this.MovementDirection = mv;
+
+        if (mv == MovementDirectionEnum.Right)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            var sp = this.GetComponent<SpriteRenderer>();
+
+            if (sp != null)
+            {
+                
+            }
+        }
+    }
+
+    public void SetSpeedAndHoriz(float Speed, float Horiz)
+    {
+        this.Speed = Speed;
+        this.HorizontalVariation = Horiz;
     }
 }

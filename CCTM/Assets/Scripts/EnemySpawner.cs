@@ -12,6 +12,9 @@ public class EnemySpawner : NetworkBehaviour {
     public float spawnMin = 2.0f;
     public float spawnMax = 4.0f;
 
+    public float speed = 10;
+    public float horizontalVariation = 1;
+
     public enum MovementDirectionEnum { Left, Right }
     public MovementDirectionEnum MovementDirection = MovementDirectionEnum.Left;
 
@@ -50,6 +53,8 @@ public class EnemySpawner : NetworkBehaviour {
 
             if (mover != null)
             {
+                mover.SetSpeedAndHoriz(speed, horizontalVariation);
+
                 switch (MovementDirection)
                 {
                     case MovementDirectionEnum.Left:
