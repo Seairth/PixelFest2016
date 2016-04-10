@@ -29,6 +29,7 @@ public class OctoMove : NetworkBehaviour {
 	bool playing = false;
 
 	private Animator anim;
+    private GameObject spawnLoc = null;
 
     // Use this for initialization
     void Start () {
@@ -43,6 +44,7 @@ public class OctoMove : NetworkBehaviour {
             {
                 sc.target = body.transform;
             }
+
             //foreach (var src in GetComponents<AudioSource>())
             //{
             //    src.Play();
@@ -63,6 +65,11 @@ public class OctoMove : NetworkBehaviour {
                 Debug.Log("Server: Error getting NHM");
             }
         }
+
+        if (PlayerNum > 0)
+        {
+            SetPlayerColor(PlayerNum);
+        }
 	}
 	
 	// Update is called once per frame
@@ -71,34 +78,65 @@ public class OctoMove : NetworkBehaviour {
         {
             Control();
         }
+
+        if (!playing)
+        {
+            MoveLocalPlayerToSpawn();
+        }
+    }
+
+    public void MoveLocalPlayerToSpawn()
+    {
+        if (isLocalPlayer)
+        {
+            if (spawnLoc != null)
+            {
+                if ((body.position.x != spawnLoc.transform.position.x) ||
+                    (body.position.y != spawnLoc.transform.position.y))
+                {
+                    Debug.Log("Setting player inital position");
+                    body.position = spawnLoc.transform.position;
+                }
+            }
+            else
+            {
+                Debug.Log("Player spawn position is null");
+            }
+        }
     }
 
 	void OnGUI()
 	{
-		if (! playing)
-		{
-			var x = Screen.width / 2;
-			var y = Screen.height / 2;
+        if (isLocalPlayer)
+        {
+            if (!playing)
+            {
+                var x = Screen.width / 2;
+                var y = Screen.height / 2;
 
-			if (isServer)
-			{
-				x -= 160 / 2;
-				y -= 30 / 2;
+                if (isServer)
+                {
+                    x -= 160 / 2;
+                    y -= 30 / 2;
 
-				if (GUI.Button(new Rect(x, y, 160, 30), "START"))
-					playing = true;
-			}
-			else
-			{
-				var style = new GUIStyle();
-				style.fontSize = 24;
-				style.fontStyle = FontStyle.Bold;
-				style.alignment = TextAnchor.MiddleCenter;
-				style.normal.textColor = Color.white;
+                    if (GUI.Button(new Rect(x, y, 160, 30), "START"))
+                    {
+                        playing = true;
+                        RpcPlaying(true);
+                    }
+                }
+                else
+                {
+                    var style = new GUIStyle();
+                    style.fontSize = 24;
+                    style.fontStyle = FontStyle.Bold;
+                    style.alignment = TextAnchor.MiddleCenter;
+                    style.normal.textColor = Color.white;
 
-				GUI.Label(new Rect(x, y, 0, 0), "WAITING FOR START...", style);
-			}
-		}
+                    GUI.Label(new Rect(x, y, 0, 0), "WAITING FOR START...", style);
+                }
+            }
+        }
 	}
 
 
@@ -195,6 +233,32 @@ public class OctoMove : NetworkBehaviour {
         //SpriteRot = rot;
     }
 
+    [Command]
+    void CmdSetPlaying(bool newPlaying)
+    {
+        playing = newPlaying;
+        Debug.Log("CmdSetPlaying: " + newPlaying + " for player " + PlayerNum);
+
+        foreach (var o in GameObject.FindObjectsOfType<OctoMove>())
+        {
+            Debug.Log("CmdSetPlaying: Setting playing to " + newPlaying + " for player " + o.PlayerNum);
+            o.playing = newPlaying;
+        }
+    }
+
+    [ClientRpc]
+    void RpcPlaying(bool newPlaying)
+    {
+        playing = newPlaying;
+        Debug.Log("CmdSetPlaying: " + newPlaying + " for player " + PlayerNum);
+
+        foreach (var o in GameObject.FindObjectsOfType<OctoMove>())
+        {
+            Debug.Log("CmdSetPlaying: Setting playing to " + newPlaying + " for player " + o.PlayerNum);
+            o.playing = newPlaying;
+        };
+    }
+
     void UpdateRot(float rot)
     {
         //transform.Rotate(SpriteRot);
@@ -212,13 +276,20 @@ public class OctoMove : NetworkBehaviour {
         if (isLocalPlayer)
         {
             Debug.Log("Local player num is now " + newPlayerNum);
+
+            spawnLoc = GameObject.Find("Player" + newPlayerNum + "Spawn");
         }
 
+        SetPlayerColor(newPlayerNum);
+    }
+
+    void SetPlayerColor(int plNum)
+    {
         var render = GetComponent<SpriteRenderer>();
 
         if (render != null)
         {
-            switch (newPlayerNum)
+            switch (plNum)
             {
                 case 1:
                     break;
@@ -233,6 +304,5 @@ public class OctoMove : NetworkBehaviour {
                     break;
             }
         }
-
     }
 }
