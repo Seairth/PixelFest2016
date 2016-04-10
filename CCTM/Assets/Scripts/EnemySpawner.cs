@@ -14,14 +14,40 @@ public class EnemySpawner : NetworkBehaviour {
 
     public float speed = 10;
     public float horizontalVariation = 1;
+    public float horizontalSpeed = 1.0f;
 
     public enum MovementDirectionEnum { Left, Right }
     public MovementDirectionEnum MovementDirection = MovementDirectionEnum.Left;
 
+    private bool first = true;
+
+    public bool SpawnImmediatelyOnStart = false;
+
 	// Use this for initialization
 	void Start () {
-        Invoke("Spawn", Random.Range(spawnMin, spawnMax));
+        //Invoke("Spawn", Random.Range(spawnMin, spawnMax));
 	}
+
+    void Update()
+    {
+        if (isSpawning && first)
+        {
+            first = false;
+
+            float initialSpawnTime = 0;
+
+            if (!SpawnImmediatelyOnStart)
+            {
+                initialSpawnTime = Random.Range(spawnMin, spawnMax);
+            }
+
+            Invoke("Spawn", initialSpawnTime);
+        }
+        if (!isSpawning && !first)
+        {
+            first = true;
+        }
+    }
 	
 	// Update is called once per frame
 	void Spawn () {
@@ -29,8 +55,8 @@ public class EnemySpawner : NetworkBehaviour {
         {
             if (ObjectsToSpawn.Length > 0)
             {
-                //RpcSpawnEnemy(ObjectsToSpawn[Random.Range(0, ObjectsToSpawn.Length)]);
-                RpcSpawnEnemy(0);
+                RpcSpawnEnemy(Random.Range(0, ObjectsToSpawn.Length));
+                //RpcSpawnEnemy(0);
             }
         }
         Invoke("Spawn", Random.Range(spawnMin, spawnMax));
@@ -53,7 +79,7 @@ public class EnemySpawner : NetworkBehaviour {
 
             if (mover != null)
             {
-                mover.SetSpeedAndHoriz(speed, horizontalVariation);
+                mover.SetSpeedAndHoriz(speed, horizontalVariation, horizontalSpeed);
 
                 switch (MovementDirection)
                 {

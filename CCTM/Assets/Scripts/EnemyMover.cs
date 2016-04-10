@@ -8,6 +8,7 @@ public class EnemyMover : MonoBehaviour {
 
     public float Speed = 1.0f;
     public float HorizontalVariation = 0.0f;
+    public float HorizontalSpeed = 1.0f;
 
     private float OriginalY = 0.0f;
     private bool goingUp = true;
@@ -33,7 +34,7 @@ public class EnemyMover : MonoBehaviour {
                 newX += (Speed * Time.deltaTime);
             }
 
-            float horizVar = (HorizontalVariation / Speed * 10) * Time.deltaTime;
+            float horizVar = (HorizontalVariation * HorizontalSpeed) * Time.deltaTime;
 
             if (goingUp)
             {
@@ -73,7 +74,7 @@ public class EnemyMover : MonoBehaviour {
         }
     }
 
-    public void SetSpeedAndHoriz(float Speed, float Horiz)
+    public void SetSpeedAndHoriz(float Speed, float Horiz, float HorizSpeed)
     {
         this.Speed = Speed;
         this.HorizontalVariation = Horiz;
