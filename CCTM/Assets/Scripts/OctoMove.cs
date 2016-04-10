@@ -28,10 +28,12 @@ public class OctoMove : NetworkBehaviour {
 	[SyncVar]
 	bool playing = false;
 
+	private Animator anim;
 
     // Use this for initialization
     void Start () {
         body = GetComponent<Rigidbody2D>();
+		anim = GetComponent<Animator>();
 
         if (isLocalPlayer)
         {
@@ -102,10 +104,19 @@ public class OctoMove : NetworkBehaviour {
 
     void Control()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
-            body.AddForce(transform.up * forwardForce);
-        else if (Input.GetKey(KeyCode.DownArrow))
-            body.AddForce(transform.up * -backwardForce);
+		anim.SetBool("PickUp", false);
+		anim.SetBool("PutDown", false);
+
+		if (Input.GetKey(KeyCode.UpArrow))
+			body.AddForce(transform.up * forwardForce);
+		else if (Input.GetKey(KeyCode.DownArrow))
+			body.AddForce(transform.up * -backwardForce);
+		else if (Input.GetKey(KeyCode.A))
+			anim.SetBool("PickUp", true);
+		else if (Input.GetKey(KeyCode.S))
+			anim.SetBool("PutDown", true);
+
+		anim.SetFloat("Speed", GetComponent<Rigidbody2D>().velocity.magnitude);
 
         if (Input.GetKey(KeyCode.LeftArrow))
         {
