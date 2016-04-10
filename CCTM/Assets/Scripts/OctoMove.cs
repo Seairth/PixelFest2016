@@ -327,6 +327,9 @@ public class OctoMove : NetworkBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other == null)
+            return;
+
         Debug.Log("OnTrigger Player");
         if (other.gameObject.CompareTag("Treasure"))
         {
