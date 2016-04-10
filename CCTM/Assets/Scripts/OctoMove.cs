@@ -145,42 +145,31 @@ public class OctoMove : NetworkBehaviour {
 		anim.SetBool("PickUp", false);
 		anim.SetBool("PutDown", false);
 
-		if (Input.GetKey(KeyCode.UpArrow))
-			body.AddForce(transform.up * forwardForce);
-		else if (Input.GetKey(KeyCode.DownArrow))
-			body.AddForce(transform.up * -backwardForce);
-		else if (Input.GetKey(KeyCode.A))
-			anim.SetBool("PickUp", true);
-		else if (Input.GetKey(KeyCode.S))
-			anim.SetBool("PutDown", true);
+		var v = Input.GetAxis("Vertical");
+
+		if (v > 0)
+			body.AddForce(transform.up * forwardForce * v);
+		else if (v < 0)
+			body.AddForce(transform.up * backwardForce * v);
 
 		anim.SetFloat("Speed", GetComponent<Rigidbody2D>().velocity.magnitude);
 
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            body.AddTorque(turnRate);
-            //body.rotation = lastRotation + turnRate;
-            //lastRotation = body.rotation;
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            body.AddTorque(-turnRate);
-            //body.rotation = lastRotation - turnRate;
-            //lastRotation = body.rotation;
-        }
-        else
-        {
-            //if (body.rotation != lastRotation)
-            //    body.rotation = lastRotation;
-        }
+		var h = Input.GetAxis("Horizontal");
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            CmdFire();
-        }
-    }
+		if (Input.GetKey(KeyCode.LeftArrow))
+			body.AddTorque(turnRate);
+		else if (Input.GetKey(KeyCode.RightArrow))
+			body.AddTorque(-turnRate);
+		else if (Mathf.Abs(h) > 0.1)
+			body.AddTorque(turnRate * -h);
 
-    public void AddSingleTreasure()
+		if (Input.GetButton("PickUp"))
+			anim.SetBool("PickUp", true);
+		else if (Input.GetButton("PutDown"))
+			anim.SetBool("PutDown", true);
+	}
+
+	public void AddSingleTreasure()
     {
         numTreasuresHolding++;
     }
