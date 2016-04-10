@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Networking;
+using System;
 
 public class OctoMove : NetworkBehaviour {
 
@@ -30,6 +31,8 @@ public class OctoMove : NetworkBehaviour {
 
 	private Animator anim;
     private GameObject spawnLoc = null;
+
+    DateTimeOffset lastPlayingCheck = DateTimeOffset.MinValue;
 
     // Use this for initialization
     void Start () {
@@ -127,13 +130,39 @@ public class OctoMove : NetworkBehaviour {
                 }
                 else
                 {
-                    var style = new GUIStyle();
-                    style.fontSize = 24;
-                    style.fontStyle = FontStyle.Bold;
-                    style.alignment = TextAnchor.MiddleCenter;
-                    style.normal.textColor = Color.white;
+                    /*
+                    if (DateTimeOffset.UtcNow.Subtract(lastPlayingCheck).TotalSeconds > 1)
+                    {
+                        bool run = false;
 
-                    GUI.Label(new Rect(x, y, 0, 0), "WAITING FOR START...", style);
+                        foreach (var v in FindObjectsOfType<OctoMove>())
+                        {
+                            if (v.IsPlaying())
+                            {
+                                run = true;
+                                break;
+                            }
+                        }
+
+                        if (run)
+                        {
+                            playing = true;
+                        }
+
+                        lastPlayingCheck = DateTimeOffset.UtcNow;
+                    }
+                    */
+
+                    if (!playing)
+                    {
+                        var style = new GUIStyle();
+                        style.fontSize = 24;
+                        style.fontStyle = FontStyle.Bold;
+                        style.alignment = TextAnchor.MiddleCenter;
+                        style.normal.textColor = Color.white;
+
+                        GUI.Label(new Rect(x, y, 0, 0), "WAITING FOR START...", style);
+                    }
                 }
             }
         }
@@ -293,5 +322,10 @@ public class OctoMove : NetworkBehaviour {
                     break;
             }
         }
+    }
+
+    public bool IsPlaying()
+    {
+        return playing;
     }
 }
